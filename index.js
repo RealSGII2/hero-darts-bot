@@ -8,6 +8,8 @@ const fs = require('fs');
  };
  exports.logMessage = logMessage;
  
+client.login(process.env.token);
+
  // Collections holding commands, aliases and categories for commands
  client.commands = new discord.Collection();
  client.aliases = new discord.Collection();
