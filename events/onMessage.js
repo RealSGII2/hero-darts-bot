@@ -10,8 +10,6 @@ module.exports = message => {
     let caseSenstiveCommand = message.content.split(" ")[0].slice(settings.prefix.length);
     const command = caseSenstiveCommand.toLowerCase();
     const args = message.content.split(" ").slice(1);
-
-    client.getPermissionLevel(message).then(permissionLevel => {
         let actualCommand;
         if (client.commands.has(command)) {
             actualCommand = client.commands.get(command);
@@ -20,16 +18,15 @@ module.exports = message => {
             actualCommand = client.commands.get(client.aliases.get(command));
         }
         if (actualCommand) {
-            if (permissionLevel >= actualCommand.config.permissionLevel) {
+            if (message.author.hasPermission(actualCommand.config.permnode)) {
                 if(actualCommand.config.enabled == true) {
-                    actualCommand.run(client, message, args, permissionLevel);
+                    actualCommand.run(client, message, args);
                 }
 
                 if(message.guild) {
                     message.delete(1500).catch(console.error);
                 }
             }
-        }
     }).catch(error => {
         console.log(error.stack);
     });
