@@ -91,18 +91,6 @@ client.on("message", async message => {
     message.channel.send(":ok_hand:")} else {"This command is reserved for the bot developers only!"}
   }
   
-  if (command === "nick") { //if (message.author.hasPermission("MANAGE_NICKNAMES")) {
-    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-    if(!member)
-      return message.reply("Please mention a valid member of this server");
-    let nick = args.slice(1).join(' ');
-    if(!nick) nick = "nil";
-    await member.setNickname(nick)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-    message.reply(`:ok_hand: **${member.user.tag}'s** nickname changed by ${message.author.tag} was set to: **${nick}**`); //} else {message.reply("Can't set the user's nickname, you're missing 'manage_nicknames' permission."}
-
-  }
-  
   if(command === "kick") {
       if(!message.member.roles.some(r=>["Administrator", "Moderator"].includes(r.name)) )
       return message.reply("Can't kick the user, you're missing 'kick_members' permission.");
