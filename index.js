@@ -4,19 +4,19 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on("ready", () => {
-  client.user.setActivity(`*help | Helping ${client.guilds.size} servers.`)
+  client.user.setActivity(`:help | Helping ${client.guilds.size} servers.`)
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); ;
 });
 
 client.on("guildCreate", guild => {
-  client.user.setActivity(`*help | Helping ${client.guilds.size} servers.`)
+  client.user.setActivity(`:help | Helping ${client.guilds.size} servers.`)
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`*help | Helping ${client.guilds.size} servers.`)
+  client.user.setActivity(`:help | Helping ${client.guilds.size} servers.`)
 });
 
 
@@ -121,7 +121,7 @@ client.on("message", async message => {
     message.channel.send(":ok_hand:")} else {"This command is reserved for the bot developers only!"}
   }
   
-  if (command === "nick") { if (message.author.hasPermission("MANAGE_NICKNAMES")) {
+  if (command === "nick") { //if (message.author.hasPermission("MANAGE_NICKNAMES")) {
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
       return message.reply("Please mention a valid member of this server");
@@ -129,7 +129,7 @@ client.on("message", async message => {
     if(!nick) nick = "nil";
     await member.setNickname(nick)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-    message.reply(`:ok_hand: **${member.user.tag}'s** nickname changed by ${message.author.tag} was set to: **${nick}**`);} else {message.reply("Can't set the user's nickname, you're missing 'manage_nicknames' permission."}
+    message.reply(`:ok_hand: **${member.user.tag}'s** nickname changed by ${message.author.tag} was set to: **${nick}**`); //} else {message.reply("Can't set the user's nickname, you're missing 'manage_nicknames' permission."}
 
   }
   
