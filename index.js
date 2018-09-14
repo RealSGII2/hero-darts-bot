@@ -20,6 +20,9 @@ client.on("guildDelete", guild => {
 });
 
 
+client.login(process.env.token);
+
+
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
   
@@ -229,5 +232,3 @@ client.on("message", async message => {
 });
   }
 });
-
-client.login(process.env.token);
