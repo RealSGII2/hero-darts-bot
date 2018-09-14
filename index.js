@@ -4,8 +4,6 @@ const Enmap = require('enmap');
 const client = new discord.Client();
 const chalk = require('chalk');
 const fs = require('fs');
-@@ -25,63 +26,66 @@
- };
  exports.logMessage = logMessage;
  
 client.login(process.env.token);
