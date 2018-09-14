@@ -77,18 +77,12 @@ client.on("message", async message => {
 });
   }
   
-  if (command === "ss") { const allowedids = [395860451382001665,258706134850863106];
+  if (command === "ss") {
     if (allowedids.includes(message.author.id)) {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});
     client.user.setStatus(sayMessage); 
-    message.channel.send(":ok_hand:");} else {"This command is reserved for the bot developers only!"}
-  }
-  if (command === "resets") { const allowedids = [395860451382001665,258706134850863106];
-    if (allowedids.includes(message.author.id)) {
-    client.user.setActivity(`*help | Helping ${client.guilds.size} servers.`); 
-    message.delete().catch(O_o=>{});
-    message.channel.send(":ok_hand:")} else {"This command is reserved for the bot developers only!"}
+    message.channel.send(":ok_hand:");
   }
   
   if(command === "kick") {
