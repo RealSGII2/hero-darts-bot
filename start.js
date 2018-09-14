@@ -1,3 +1,3 @@
-const discord = require('discord.js')
-const client = discord.Client()
-client.login(process.env.token)
+const discord = require('discord.js');
+const client = new discord.Client();
+client.login(process.env.token);
