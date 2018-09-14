@@ -1,8 +1,8 @@
 // Requirements
-const embedSender = require('../../utilities/embedSender.js');
+
 
 exports.run = async(client, message) => {
-    embedSender.logBot(message, 'Ping', 'Pong!');
+    message.channel.send("Pong!");
 };
 
 exports.config = {
@@ -10,7 +10,7 @@ exports.config = {
     guildOnly: false,
     category: 'bot',
     aliases: [],
-    permissionLevel: 2
+    permnode = 'READ_MESSAGES'
 };
 
 exports.help = {
