@@ -18,10 +18,6 @@ client.on("guildDelete", guild => {
   client.user.setActivity(`Helping ${client.guilds.size} servers.`)
 });
 
-
-client.login(process.env.token);
-
-
 client.on("message", async message => {
   // Command filtering
   if(message.author.bot) return;
@@ -32,5 +28,7 @@ client.on("message", async message => {
   // Commands
   
   if (command === "ping") {message.channel.send("Pong!"}
-  
 });
+                           
+// Start the bot
+client.login(process.env.token)
