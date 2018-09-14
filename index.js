@@ -1,5 +1,6 @@
 // Requirements
 const discord = require('discord.js');
+const Enmap = require('enmap');
 const client = new discord.Client();
 const chalk = require('chalk');
 const fs = require('fs');
@@ -85,3 +86,6 @@ client.getPermissionLevel = async function(message) {
 };
 
 // LOG DELETED MESSAGES!
+
+// Settings Handler
+
