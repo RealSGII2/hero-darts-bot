@@ -50,33 +50,6 @@ client.on("message", async message => {
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   
-  if (command === "invite") {
-    message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    title: "Invite Dart Bot",
-    description: "Dart Bot is currently a moderation bot. More to be added soon! ",
-    fields: [{
-        name: "Invite Bot",
-        value: "You can invite **Dart Bot** [here](https://discordapp.com/api/oauth2/authorize?client_id=489353619842400266&permissions=8&scope=bot)."
-      },
-      {
-        name: "Support Server",
-        value: "Join our [support server](https://discord.gg/zn4rbyn)."
-      },
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "Requested"
-    }
-  }
-});
-  }
-  
   if (command === "ss") {
     if (allowedids.includes(message.author.id)) {
     const sayMessage = args.join(" ");
