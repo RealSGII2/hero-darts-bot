@@ -14,7 +14,7 @@ exports.config = {
 };
 
 exports.help = {
-    name: 'ping',
+    name: 'Utility',
     description: 'Pings the bot.',
     usage: 'ping'
 };
