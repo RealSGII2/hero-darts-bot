@@ -1,5 +1,4 @@
 // start discord.js init
-const config = require("./config.json"); // See config.json below for example
 const Discord = require("discord.js"); // Code below supports and is tested under "stable" 11.3.x
 const client = new Discord.Client();
 // end discord.js init
@@ -114,4 +113,4 @@ client.on("message", async (message) => {
 });
 
 // Start the bot by logging it in.
-client.login(config.token);
+client.login(process.env.token);
