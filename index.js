@@ -27,7 +27,7 @@ client.on("message", async message => {
   
   // Commands
   
-  if (command === "ping") {message.channel.send("Pong!"}
+  if (command === "ping") {message.channel.send("Pong!")}
 });
                            
 // Start the bot
