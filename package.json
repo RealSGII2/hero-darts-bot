@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "author": "RealSGII2",
   "license": "none",
   "bugs": {
-    "url": "https://github.com/RealSGII2/hero-darts-bot/issues"
+    "url": "https://github.com/RealSGII2/hero-darts-bot/issues",
   },
   "homepage": "https://github.com/RealSGII2/hero-darts-bot/blob/master/README.md",
   "dependencies": {
