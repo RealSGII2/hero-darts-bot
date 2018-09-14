@@ -196,4 +196,4 @@ const token = process.env.token
    }
  });
  
- client.login(config);
+ client.login(token);
