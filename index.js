@@ -77,39 +77,6 @@ client.on("message", async message => {
 });
   }
   
-  if(command === "say") { const allowedids = [395860451382001665,258706134850863106];
-    if (allowedids.includes(message.author.id)) {
-    const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{}); 
-    message.channel.send(sayMessage);} else {"This command is reserved for the bot developers only!"}
-  }
-  
-  if(command === "sayembed") { const allowedids = [395860451382001665,258706134850863106];
-    if (allowedids.includes(message.author.id)) {
-    const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{}); 
-    message.author.send({embed: {
-    color: 3447003,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
-    },
-    title: "Dart Bot",
-    description: " ",
-    fields: [{
-        name: "Sent Embed",
-        value: sayMessage
-      },
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "Sent"
-    }
-  }
-});} else {"This command is reserved for the bot developers only!"}
-  }
-  
   if (command === "ss") { const allowedids = [395860451382001665,258706134850863106];
     if (allowedids.includes(message.author.id)) {
     const sayMessage = args.join(" ");
