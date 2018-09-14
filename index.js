@@ -54,15 +54,15 @@ client.login(process.env.token);
          //     permissionLevel = 1;
          // }
  
-         const modRole = guild.roles.find('name', settings.roles.moderatorRole);
+         const modRole = guild.roles.find('name', client.settings.get(guild.id, "modRole"));
          if(modRole && member.roles.has(modRole.id)) {
              permissionLevel = 2;
          }
-         const adminRole = guild.roles.find('name', settings.roles.adminRole);
+         const adminRole = guild.roles.find('name', client.settings.get(guild.id, "adminRole"));
          if(adminRole && member.roles.has(adminRole.id)) {
              permissionLevel = 3;
          }
-         if(message.author.id === require('./settings.json').ownerID) {
+         if(message.author.id === guild.ownerID) {
              permissionLevel = 4;
          }
      }
