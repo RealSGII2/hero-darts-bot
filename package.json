@@ -1,1 +1,31 @@
 
+{
+  "name": "hero-darts-bot",
+  "version": "0.0.0",
+  "description": "A work in progress moderation bot. More to be added soontm.",
+  "main": "index.js",
+  "engines": {
+    "node": "8.x",
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RealSGII2/hero-darts-bot",
+  },
+  "keywords": [
+    "heroku",
+    "discord.js"
+  ],
+  "author": "RealSGII2",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/RealSGII2/hero-darts-bot/issues"
+  },
+  "homepage": "https://github.com/RealSGII2/hero-darts-bot/blob/master/README.md",
+  "dependencies": {
+    "discord.js": "^11.3.0"
+  }
+}
