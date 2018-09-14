@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const prefix = "*";
+const config = "./config.js"
 
 client.on("ready", () => {
   client.user.setActivity(`Helping ${client.guilds.size} servers.`);
