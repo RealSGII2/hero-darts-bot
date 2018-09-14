@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const prefix = ":";
+const prefix = "*";
 
 client.on("ready", () => {
   client.user.setActivity(`Helping ${client.guilds.size} servers.`);
@@ -27,8 +27,8 @@ client.on("message", async message => {
   
   // Commands
   
-  if (command === "ping") {message.channel.send("Pong!")}
+  if (command === "ping") {message.channel.send("Pong!");}
 });
                            
 // Start the bot
-client.login(process.env.token)
+client.login(process.env.token);
