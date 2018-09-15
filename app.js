@@ -10,7 +10,7 @@ client.on("message", (message) => {
     message.channel.send("pong!");
   } else
   if (message.content.startsWith(prefix + "ss")) {
-    message.channel.send("Check what I'm playing!`);
+    message.channel.send("Check what I'm playing!");
     client.setStatus(`test`)
   }
 });
