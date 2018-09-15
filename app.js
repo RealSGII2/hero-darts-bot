@@ -11,8 +11,7 @@ client.on("message", (message) => {
   } else
   if (message.content.startsWith(prefix + "ss")) {
     message.channel.send("Check what I'm playing!");
-    client.user.setStatus("it works!");
-  }
+    client.user.setActivity('${client.guilds.size} servers', { type: 'WATCHING' })
 });
 
 client.login(process.env.token);
