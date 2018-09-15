@@ -9,8 +9,9 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
   } else
-  if (message.content.startsWith(prefix + "hi")) {
-    message.channel.send("bye");
+  if (message.content.startsWith(prefix + "ss")) {
+    message.channel.send("Check what I'm playing!`);
+    client.setStatus(`test`)
   }
 });
 
