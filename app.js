@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client(); 
 const prefix = ";";
 
+client.login(process.env.token);
+
 client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
@@ -15,5 +17,3 @@ client.on("message", (message) => {
   .then(console.log)
   .catch(console.error);
 });
-
-client.login(process.env.token);
