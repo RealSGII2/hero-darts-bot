@@ -37,11 +37,13 @@ client.on("message", (message) => {
 });
   } else
   if (message.content.startsWith(prefix + "commands")) {
-    message.channel.send("There are no commands to show! The bot is being developed.");
+    message.channel.send("There are no commands to show! The bot is being developed. Nothing was DM'd to you.");
   } else
     
   if (message.content.startsWith(prefix + "invite")) {
-    message.channel.send({embed: {
+    message.channel.send("I DM'd you the invites!"
+    message.author.send("I DM'd you this to help prevent invite links.")
+    message.author.send({embed: {
     color: 3447003,
     author: {
       name: client.user.username,
