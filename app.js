@@ -8,7 +8,7 @@ client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong!");
+    message.channel.send("Pong! `${client.ping}`");
   } else
   if (message.content.startsWith(prefix + "help")) {
     message.channel.send({embed: {
