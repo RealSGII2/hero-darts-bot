@@ -21,11 +21,11 @@ client.on("message", (message) => {
     description: "A simple bot coded by SGII2 and Lxphere. Made for Dart.",
     fields: [{
         name: "Commands",
-        value: "Commands can be found by saying `${prefix}commands`."
+        value: "Commands can be found by saying `" + prefix + "commands`."
       },
       {
         name: "Inviting the Bot or Need Support?",
-        value: "You can join our support server or invite the bot by saying `${prefix}invite`."
+        value: "You can join our support server or invite the bot by saying `" + prefix + "invite`."
       },
     ],
     timestamp: new Date(),
