@@ -17,8 +17,8 @@ client.on("message", (message) => {
       name: client.user.username,
       icon_url: client.user.avatarURL
     },
-    title: "Dart Bot",
-    description: "A simple bot coded by SGII2 and Lxphere. Made for Dart.",
+    title: "What does it do?",
+    description: "Dart Bot is a moderation bot currently in early beta.",
     fields: [{
         name: "Commands",
         value: "Commands can be found by saying `" + prefix + "commands`."
