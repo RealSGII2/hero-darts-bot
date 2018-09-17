@@ -1,10 +1,10 @@
 {
-  "name": "hero-darts-bot",
-  "description": "A public bot.",
+  "name": "dart-bot",
+  "description": "a kewl bot",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node ./app.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "discord.js": "11.1.0",
